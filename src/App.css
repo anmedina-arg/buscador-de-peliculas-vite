@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* para hacer un grid responsive aprenderse de memoria las lineas comentadas! */
+
+main {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.movies {
+  /* que tome el ancho del contenedor */
+  width: 100%;
+  /* poner display grid */
+  display: grid;
+  /* grid template columns, con repeat y con auto-fit */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* SIEMPRE ES CONVENIENTE usar gap para espaciar en una grilla antes que los paddings o margins */
+  gap: 32px;
+}
+
+.movie-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie-item img {
+  width: 100%;
+  height: 80%;
+}
