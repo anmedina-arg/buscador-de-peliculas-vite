@@ -5,21 +5,126 @@
   align-items: center;
 }
 
-/* para hacer un grid responsive aprenderse de memoria las lineas comentadas! */
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-family: "Bebas Neue", sans-serif;
+  padding: 2rem;
+  color: azure;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(54, 130, 145, 1) 100%
+  );
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 3rem;
+}
+
+form {
+  padding: 1rem;
+  background-color: #020024;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-text,
+button {
+  box-shadow: 6px 6px 18px #a2a2a2, -6px -6px 18px #9e9ea6;
+  border: 1px solid white;
+  background-color: #ececec;
+}
+
+input[type="text"] {
+  margin-inline: 2rem;
+  border-radius: 30px;
+  height: 3rem;
+  width: 50%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+input[type="text"]::placeholder {
+  color: #d1d0d0;
+}
+
+button {
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+}
+
+.alphabetic-order {
+  margin-top: 1.5rem;
+  color: #ececec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+.checkbox {
+  height: 1.5rem;
+  aspect-ratio: 1/1;
+}
+
+.error {
+  padding: 1rem;
+  background-color: #020024;
+  border: 3px solid red;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  color: red;
+  font-weight: bold;
+}
 
 main {
-  max-width: 1000px;
+  max-width: 100vw;
   width: 100%;
+  background: rgb(162, 162, 162);
+  background: radial-gradient(
+    circle,
+    rgba(162, 162, 162, 1) 0%,
+    rgba(2, 0, 36, 1) 100%
+  );
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  color: #ececec;
+  padding: 2rem;
 }
 
 .movies {
-  /* que tome el ancho del contenedor */
   width: 100%;
-  /* poner display grid */
   display: grid;
-  /* grid template columns, con repeat y con auto-fit */
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  /* SIEMPRE ES CONVENIENTE usar gap para espaciar en una grilla antes que los paddings o margins */
   gap: 32px;
 }
 
@@ -28,9 +133,18 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding: 0.5rem;
+  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.movie-item h3 {
+  text-align: center;
 }
 
 .movie-item img {
   width: 100%;
   height: 80%;
+  border-radius: 10px;
 }
